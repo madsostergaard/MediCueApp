@@ -75,6 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-193" y="33"/>
         </scene>
         <!--Kalender-->
         <scene sceneID="JUL-nw-R9W">
@@ -106,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HD-HD-VAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711.1999999999998" y="-646.32683658170924"/>
+            <point key="canvasLocation" x="1817" y="-714"/>
         </scene>
         <!--Mere-->
         <scene sceneID="I7p-dh-Rok">
@@ -138,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIO-gx-RUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3650.4000000000001" y="742.5787106446777"/>
+            <point key="canvasLocation" x="2711" y="871"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LzQ-6N-ujM">
@@ -160,7 +161,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gab-bg-XLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="32.833583208395808"/>
+            <point key="canvasLocation" x="833" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VrS-e6-03X">
@@ -235,7 +236,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFY-Jq-dHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="871"/>
+            <point key="canvasLocation" x="1817" y="871"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mTX-sB-KIm">
