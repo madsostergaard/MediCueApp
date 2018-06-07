@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		09EF949B20C92FB60034428E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EF949920C92FB60034428E /* LaunchScreen.storyboard */; };
 		09EF94A620C92FB60034428E /* MediCueAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF94A520C92FB60034428E /* MediCueAppTests.swift */; };
 		09EF94B120C92FB70034428E /* MediCueAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF94B020C92FB70034428E /* MediCueAppUITests.swift */; };
+		0B40DCD90E4AF83840855B9A /* Pods_MediCueAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623BCBB0D22BAEB566D3D82 /* Pods_MediCueAppTests.framework */; };
+		8F13614D0DD8A8F31647A65A /* Pods_MediCueApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE4E0C0997790CD521CD710 /* Pods_MediCueApp.framework */; };
+		B4B3E8DD5532D8E09BB42434 /* Pods_MediCueAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE37913F97DB5E2F321037C /* Pods_MediCueAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,16 @@
 		09EF94AC20C92FB70034428E /* MediCueAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediCueAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF94B020C92FB70034428E /* MediCueAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediCueAppUITests.swift; sourceTree = "<group>"; };
 		09EF94B220C92FB70034428E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09EF94BE20C934210034428E /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		0D121CFBEFA93FFA30AD4F63 /* Pods-MediCueAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppTests/Pods-MediCueAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		11F1D59D2634C9F83E8D6AAA /* Pods-MediCueApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3623BCBB0D22BAEB566D3D82 /* Pods_MediCueAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediCueAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED2C9906FDAF88BB4E711C7 /* Pods-MediCueAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppTests/Pods-MediCueAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AE4E0C0997790CD521CD710 /* Pods_MediCueApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediCueApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0DE604B85D1E9F3FD73A34 /* Pods-MediCueApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp.release.xcconfig"; sourceTree = "<group>"; };
+		DEA96A5A2BEE1CA6BFF8E934 /* Pods-MediCueAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppUITests/Pods-MediCueAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DEE37913F97DB5E2F321037C /* Pods_MediCueAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediCueAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F1B3DC61E1058DA5631A3C /* Pods-MediCueAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppUITests/Pods-MediCueAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F13614D0DD8A8F31647A65A /* Pods_MediCueApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B40DCD90E4AF83840855B9A /* Pods_MediCueAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B3E8DD5532D8E09BB42434 /* Pods_MediCueAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +97,8 @@
 				09EF94A420C92FB60034428E /* MediCueAppTests */,
 				09EF94AF20C92FB70034428E /* MediCueAppUITests */,
 				09EF948E20C92FB50034428E /* Products */,
+				12DF5E044B080A5B2FD8EBC3 /* Pods */,
+				0ADB3773F4A6793F49FA60AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +115,7 @@
 		09EF948F20C92FB50034428E /* MediCueApp */ = {
 			isa = PBXGroup;
 			children = (
+				09EF94BE20C934210034428E /* ObjCBridge.h */,
 				09EF949020C92FB50034428E /* AppDelegate.swift */,
 				09EF949220C92FB50034428E /* ViewController.swift */,
 				09EF949420C92FB50034428E /* Main.storyboard */,
@@ -125,6 +144,29 @@
 			path = MediCueAppUITests;
 			sourceTree = "<group>";
 		};
+		0ADB3773F4A6793F49FA60AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AE4E0C0997790CD521CD710 /* Pods_MediCueApp.framework */,
+				3623BCBB0D22BAEB566D3D82 /* Pods_MediCueAppTests.framework */,
+				DEE37913F97DB5E2F321037C /* Pods_MediCueAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12DF5E044B080A5B2FD8EBC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11F1D59D2634C9F83E8D6AAA /* Pods-MediCueApp.debug.xcconfig */,
+				7F0DE604B85D1E9F3FD73A34 /* Pods-MediCueApp.release.xcconfig */,
+				3ED2C9906FDAF88BB4E711C7 /* Pods-MediCueAppTests.debug.xcconfig */,
+				0D121CFBEFA93FFA30AD4F63 /* Pods-MediCueAppTests.release.xcconfig */,
+				E7F1B3DC61E1058DA5631A3C /* Pods-MediCueAppUITests.debug.xcconfig */,
+				DEA96A5A2BEE1CA6BFF8E934 /* Pods-MediCueAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09EF94B520C92FB70034428E /* Build configuration list for PBXNativeTarget "MediCueApp" */;
 			buildPhases = (
+				AA62BD6CB68EA029C27D01FC /* [CP] Check Pods Manifest.lock */,
 				09EF948920C92FB50034428E /* Sources */,
 				09EF948A20C92FB50034428E /* Frameworks */,
 				09EF948B20C92FB50034428E /* Resources */,
@@ -149,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09EF94B820C92FB70034428E /* Build configuration list for PBXNativeTarget "MediCueAppTests" */;
 			buildPhases = (
+				00FD676D4EA74AAE40717E98 /* [CP] Check Pods Manifest.lock */,
 				09EF949D20C92FB60034428E /* Sources */,
 				09EF949E20C92FB60034428E /* Frameworks */,
 				09EF949F20C92FB60034428E /* Resources */,
@@ -167,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09EF94BB20C92FB70034428E /* Build configuration list for PBXNativeTarget "MediCueAppUITests" */;
 			buildPhases = (
+				BC9F0028FCBA06DACA6CFE0C /* [CP] Check Pods Manifest.lock */,
 				09EF94A820C92FB70034428E /* Sources */,
 				09EF94A920C92FB70034428E /* Frameworks */,
 				09EF94AA20C92FB70034428E /* Resources */,
@@ -193,19 +238,27 @@
 				TargetAttributes = {
 					09EF948C20C92FB50034428E = {
 						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					09EF94A020C92FB60034428E = {
 						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 09EF948C20C92FB50034428E;
 					};
 					09EF94AB20C92FB70034428E = {
 						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 09EF948C20C92FB50034428E;
 					};
 				};
 			};
 			buildConfigurationList = 09EF948820C92FB50034428E /* Build configuration list for PBXProject "MediCueApp" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -250,6 +303,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00FD676D4EA74AAE40717E98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediCueAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA62BD6CB68EA029C27D01FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediCueApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9F0028FCBA06DACA6CFE0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediCueAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09EF948920C92FB50034428E /* Sources */ = {
@@ -420,25 +530,24 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		09EF94B620C92FB70034428E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F1D59D2634C9F83E8D6AAA /* Pods-MediCueApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,17 +555,17 @@
 		};
 		09EF94B720C92FB70034428E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0DE604B85D1E9F3FD73A34 /* Pods-MediCueApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,17 +573,14 @@
 		};
 		09EF94B920C92FB70034428E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ED2C9906FDAF88BB4E711C7 /* Pods-MediCueAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,17 +591,14 @@
 		};
 		09EF94BA20C92FB70034428E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D121CFBEFA93FFA30AD4F63 /* Pods-MediCueAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,16 +609,13 @@
 		};
 		09EF94BC20C92FB70034428E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F1B3DC61E1058DA5631A3C /* Pods-MediCueAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,16 +626,13 @@
 		};
 		09EF94BD20C92FB70034428E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEA96A5A2BEE1CA6BFF8E934 /* Pods-MediCueAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,0 +1,6 @@
+framework module Pods_MediCueAppUITests {
+  umbrella header "Pods-MediCueAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
