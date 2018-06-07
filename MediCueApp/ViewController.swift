@@ -20,8 +20,17 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate {
         
         /*
             The following creates two rules ands appends them to a trigger.
-            When the
+         
+            It should be possible to add multiple triggers to the triggerManager
+         
+            The trigger then fires the code in triggerManager...
+         
+         Possible (useful) rules are:
+            - ESTDateRule (based on time)
+            - ESTProximityRule (based on proximity)
+            - ESTNearableRule
         */
+        
         // create rules: (DON'T RUN - DOESN'T WORK)
         let rule1 = ESTOrientationRule.orientationEquals(
             .horizontalUpsideDown, for: .bag)
