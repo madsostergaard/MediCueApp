@@ -585,6 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -603,6 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -620,6 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,6 +640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = MediCueAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.dtu.Mads.MediCueAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
