@@ -48,7 +48,7 @@
                                     <color key="titleColor" name="MainColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9a7-b4-E5L" kind="show" id="x3i-gb-yEG"/>
+                                    <segue destination="Aja-J9-PvF" kind="show" id="17M-y9-JVt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,14 +75,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="33"/>
+            <point key="canvasLocation" x="-958" y="33"/>
         </scene>
         <!--Kalender-->
         <scene sceneID="JUL-nw-R9W">
             <objects>
-                <viewController id="Ac3-IX-j4A" customClass="ViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ac3-IX-j4A" customClass="CalendarViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4d-ks-5yj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9ia-KA-trn"/>
@@ -96,9 +96,9 @@
         <!--Forløb-->
         <scene sceneID="lXZ-XL-fUu">
             <objects>
-                <viewController id="FI3-QC-dAr" sceneMemberID="viewController">
+                <viewController id="FI3-QC-dAr" customClass="ProgressViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jPn-7R-Arn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="A6m-sq-Knc"/>
@@ -112,9 +112,9 @@
         <!--Mere-->
         <scene sceneID="ih8-9B-I5t">
             <objects>
-                <tableViewController id="mg7-9l-RK9" sceneMemberID="viewController">
+                <tableViewController id="mg7-9l-RK9" customClass="SettingsTableViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IP0-hN-GjX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -139,31 +139,50 @@
             <point key="canvasLocation" x="833" y="1659"/>
         </scene>
         <!--Medicin-->
-        <scene sceneID="IxN-h0-ZKP">
+        <scene sceneID="vVd-xp-nhJ">
             <objects>
-                <viewController id="3tP-Kj-ApG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dig-Ni-nfc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="OFG-WO-EpY" customClass="MedicineTableViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E4u-9i-S1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="F4h-y8-7Jf"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Medicin" id="rPb-tt-tsx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vIO-gx-RUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="medsCell" id="OGx-CM-G6w">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OGx-CM-G6w" id="31Y-6p-GXX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OFG-WO-EpY" id="1fV-BD-FyI"/>
+                            <outlet property="delegate" destination="OFG-WO-EpY" id="5yl-KH-HYc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Medicin" id="tkY-Qz-K1g">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="aAg-zq-4MZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNM-fy-hHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="871"/>
+            <point key="canvasLocation" x="2711" y="870"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LzQ-6N-ujM">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9a7-b4-E5L" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pmu-we-wvR">
+                    <tabBar key="tabBar" alpha="0.90000000000000002" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pmu-we-wvR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="SecondColor"/>
-                        <color key="selectedImageTintColor" name="MainColor"/>
+                        <color key="backgroundColor" name="SecondColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="MainColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="JgF-eT-Pbg" kind="relationship" relationship="viewControllers" id="EWe-Bn-cW5"/>
@@ -176,20 +195,20 @@
             </objects>
             <point key="canvasLocation" x="833" y="33"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Kalender-->
         <scene sceneID="VrS-e6-03X">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JgF-eT-Pbg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="uD3-n1-Z4l">
+                    <tabBarItem key="tabBarItem" title="Kalender" image="calendarLogo" selectedImage="calendarLogo" id="uD3-n1-Z4l">
                         <color key="badgeColor" name="SecondColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2OY-Ao-4ZV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="SecondColor"/>
+                        <color key="barTintColor" name="MainColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="MainColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -201,23 +220,44 @@
             </objects>
             <point key="canvasLocation" x="1818" y="33"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View Controller-->
+        <scene sceneID="lp7-ps-o1X">
+            <objects>
+                <viewController id="Aja-J9-PvF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ixb-bq-kYC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VtI-69-gy4"/>
+                    </view>
+                    <connections>
+                        <segue destination="9a7-b4-E5L" kind="show" id="v1b-Cy-moH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIE-Oh-Y0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="33"/>
+        </scene>
+        <!--Forløb-->
         <scene sceneID="Ik8-j9-RRZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hc-ZR-JfL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="sfh-1Y-ECC">
+                    <tabBarItem key="tabBarItem" title="Forløb" image="progressLogo" selectedImage="progressLogo" id="sfh-1Y-ECC">
                         <color key="badgeColor" name="SecondColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4hb-Z6-kb4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="SecondColor"/>
+                        <color key="barTintColor" name="MainColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="MainColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PAL-6N-Fu4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="FI3-QC-dAr" kind="relationship" relationship="rootViewController" id="fOQ-49-ZJU"/>
                     </connections>
@@ -226,25 +266,25 @@
             </objects>
             <point key="canvasLocation" x="833" y="-713"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Medicin-->
         <scene sceneID="cc2-kz-93Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faA-M0-k8F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="Gj9-gf-0sn">
+                    <tabBarItem key="tabBarItem" title="Medicin" image="medicineLogo" landscapeImage="medicineLogo" selectedImage="medicineLogo" id="Gj9-gf-0sn">
                         <color key="badgeColor" name="SecondColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mrU-6t-ja3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="SecondColor"/>
+                        <color key="barTintColor" name="MainColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="MainColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3tP-Kj-ApG" kind="relationship" relationship="rootViewController" id="e1N-iQ-XJ6"/>
+                        <segue destination="OFG-WO-EpY" kind="relationship" relationship="rootViewController" id="qsR-Sh-ykW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFY-Jq-dHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,9 +300,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G0S-Fu-ZZJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="SecondColor"/>
+                        <color key="barTintColor" name="MainColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="MainColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -277,11 +317,21 @@
     </scenes>
     <resources>
         <image name="MediCueLogo" width="2754" height="771"/>
+        <image name="calendarLogo" width="25" height="25"/>
+        <image name="medicineLogo" width="25" height="25"/>
+        <image name="progressLogo" width="25" height="25"/>
+        <namedColor name="MainColor">
+            <color red="0.33725490196078434" green="0.54117647058823526" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="MainColor">
             <color red="0.33725490196078434" green="0.54117647058823526" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondColor">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="SecondColor">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
+    <color key="tintColor" name="SecondColor"/>
 </document>
