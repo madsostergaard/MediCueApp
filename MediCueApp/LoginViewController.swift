@@ -10,12 +10,42 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var inputUsername: UITextField!
+    @IBOutlet weak var inputPassword: UITextField!
+    var standardLogin: String? = "standardLogin"
+    var standardPassword: String? = "standardPassword"
+    let test: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        autoLogin()
+        
+        
+    
     }
 
+    func autoLogin(){
+        
+        if test == true {
+            UserDefaults.standard.set("Maria", forKey: standardLogin!)
+            UserDefaults.standard.set("Mugabe", forKey: standardPassword!)
+        }
+        
+        let login = UserDefaults.standard.string(forKey: standardLogin!)
+        let password = UserDefaults.standard.string(forKey: standardPassword!)
+        if login != nil && password != nil
+        {
+            self.inputUsername.text = login!
+            self.inputPassword.text = password!
+        } else {
+            self.inputUsername.text = ""
+            self.inputPassword.text = ""
+        }
+        print("login " , login!)
+        print("password " , password!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
