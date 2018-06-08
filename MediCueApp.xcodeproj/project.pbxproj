@@ -11,6 +11,7 @@
 		0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53F20C963C2003B2334 /* CalendarViewController.swift */; };
 		0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54120C963F6003B2334 /* MedicineTableViewController.swift */; };
 		0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54320C96405003B2334 /* SettingsTableViewController.swift */; };
+		0960C54620CA60FB003B2334 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54520CA60FB003B2334 /* Medicine.swift */; };
 		09EF949120C92FB50034428E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF949020C92FB50034428E /* AppDelegate.swift */; };
 		09EF949320C92FB50034428E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF949220C92FB50034428E /* ViewController.swift */; };
 		09EF949620C92FB50034428E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EF949420C92FB50034428E /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		0960C53F20C963C2003B2334 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0960C54120C963F6003B2334 /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
 		0960C54320C96405003B2334 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		0960C54520CA60FB003B2334 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		09EF948D20C92FB50034428E /* MediCueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediCueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF949020C92FB50034428E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09EF949220C92FB50034428E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				0960C53F20C963C2003B2334 /* CalendarViewController.swift */,
 				0960C54120C963F6003B2334 /* MedicineTableViewController.swift */,
 				0960C54320C96405003B2334 /* SettingsTableViewController.swift */,
+				0960C54520CA60FB003B2334 /* Medicine.swift */,
 			);
 			path = MediCueApp;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				09EF948920C92FB50034428E /* Sources */,
 				09EF948A20C92FB50034428E /* Frameworks */,
 				09EF948B20C92FB50034428E /* Resources */,
+				D7176BC0C2398D20BCB824E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,6 +383,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D7176BC0C2398D20BCB824E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -393,6 +419,7 @@
 				09EF949120C92FB50034428E /* AppDelegate.swift in Sources */,
 				0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */,
 				0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */,
+				0960C54620CA60FB003B2334 /* Medicine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

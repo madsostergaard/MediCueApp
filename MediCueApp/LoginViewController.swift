@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var inputUsername: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
+    
     var standardLogin: String? = "standardLogin"
     var standardPassword: String? = "standardPassword"
     let test: Bool = true
