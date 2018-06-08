@@ -9,6 +9,8 @@
 import UIKit
 
 class MedicineTableViewController: UITableViewController {
+    
+    var medArr = [Medicine]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +31,12 @@ class MedicineTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return medArr.count
     }
 
     
@@ -44,6 +46,10 @@ class MedicineTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    @IBAction func unwindToMedicineTableView(segue: UIStoryboardSegue){
+        
     }
     
 

@@ -25,6 +25,10 @@ class LoginViewController: UIViewController {
         
     
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
     func autoLogin(){
         
@@ -50,6 +54,22 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func unwindToLoginView(segue: UIStoryboardSegue){
+        if let id = segue.identifier {
+            print("in unwindToLoginView, sender: \(id)")
+            switch segue.identifier {
+            case "loggedOut":
+                print("Goodbye good sir!")
+            case "cancelNewUser":
+                print("Awww.. Why do you hate me?")
+            case "addedUser":
+                print("You tried to add a new user! Hooray!")
+            default:
+                print("Will I be called?")
+            }
+        }
     }
     
 

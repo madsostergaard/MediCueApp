@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0903F88320CA99A80099E104 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88220CA99A80099E104 /* AddMedicineViewController.swift */; };
+		0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */; };
 		0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53D20C963AF003B2334 /* ProgressViewController.swift */; };
 		0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53F20C963C2003B2334 /* CalendarViewController.swift */; };
 		0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54120C963F6003B2334 /* MedicineTableViewController.swift */; };
 		0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54320C96405003B2334 /* SettingsTableViewController.swift */; };
 		0960C54620CA60FB003B2334 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54520CA60FB003B2334 /* Medicine.swift */; };
+		0960C54820CA6BAE003B2334 /* AddNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54720CA6BAE003B2334 /* AddNewUserViewController.swift */; };
 		09EF949120C92FB50034428E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF949020C92FB50034428E /* AppDelegate.swift */; };
 		09EF949320C92FB50034428E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF949220C92FB50034428E /* ViewController.swift */; };
 		09EF949620C92FB50034428E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EF949420C92FB50034428E /* Main.storyboard */; };
@@ -43,11 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0903F88220CA99A80099E104 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
+		0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineTimesViewController.swift; sourceTree = "<group>"; };
 		0960C53D20C963AF003B2334 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		0960C53F20C963C2003B2334 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0960C54120C963F6003B2334 /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
 		0960C54320C96405003B2334 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		0960C54520CA60FB003B2334 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		0960C54720CA6BAE003B2334 /* AddNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewController.swift; sourceTree = "<group>"; };
 		09EF948D20C92FB50034428E /* MediCueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediCueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF949020C92FB50034428E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09EF949220C92FB50034428E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 				0960C54120C963F6003B2334 /* MedicineTableViewController.swift */,
 				0960C54320C96405003B2334 /* SettingsTableViewController.swift */,
 				0960C54520CA60FB003B2334 /* Medicine.swift */,
+				0960C54720CA6BAE003B2334 /* AddNewUserViewController.swift */,
+				0903F88220CA99A80099E104 /* AddMedicineViewController.swift */,
+				0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */,
 			);
 			path = MediCueApp;
 			sourceTree = "<group>";
@@ -413,12 +422,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */,
+				0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */,
 				0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */,
+				0903F88320CA99A80099E104 /* AddMedicineViewController.swift in Sources */,
 				09EF94C320C948320034428E /* LoginViewController.swift in Sources */,
 				09EF949320C92FB50034428E /* ViewController.swift in Sources */,
 				09EF949120C92FB50034428E /* AppDelegate.swift in Sources */,
 				0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */,
 				0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */,
+				0960C54820CA6BAE003B2334 /* AddNewUserViewController.swift in Sources */,
 				0960C54620CA60FB003B2334 /* Medicine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
