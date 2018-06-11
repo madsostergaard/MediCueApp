@@ -16,7 +16,6 @@ class AddMedicineViewController: UIViewController {
     @IBOutlet weak var packageCountTextField: UITextField!
     @IBOutlet weak var activateEndDateSwitch: UISwitch!
     @IBOutlet weak var endDateTextField: UITextField!
-    
     @IBOutlet weak var interval: UISegmentedControl!
     
     @IBAction func activateChanged(_ sender: Any) {
@@ -48,6 +47,19 @@ class AddMedicineViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTidspunkt" {
+            let med = Medicine(name: nameTextField.text!)
+            //med?.date = startDateTextField.text! as Date
+           
+//----------- set alle atributterne for medicinobjektet inden de sendes videre med skriftet af viewcontroller --
+            
+            let addMedicineTimes = segue.destination as! AddMedicineTimesViewController
+            addMedicineTimes.med = med
+            
+        }
+    }
+    
     
     @objc func startDatePickerValueChanged(sender: UIDatePicker){
         let formatter = DateFormatter()

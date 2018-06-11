@@ -10,11 +10,25 @@ import UIKit
 
 class AddMedicineTimesViewController: UIViewController {
 
+    var med: Medicine?{
+        didSet{
+            configureView()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    func configureView(){
+        
+        // input all the data recieved via segue in the view
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
