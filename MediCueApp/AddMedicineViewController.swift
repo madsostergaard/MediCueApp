@@ -49,8 +49,8 @@ class AddMedicineViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTidspunkt" {
-            let med = Medicine(name: nameTextField.text!)
-            //med?.date = startDateTextField.text! as Date
+            let med = Medicine()
+        
            
 //----------- set alle atributterne for medicinobjektet inden de sendes videre med skriftet af viewcontroller --
             
