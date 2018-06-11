@@ -51,19 +51,7 @@ class Medicine: NSObject{
         case injektion, tablet, pill
     }
     
-    init?(name: String){
-        self.name = name
-        
-        guard !name.isEmpty else {
-            return nil
-        }
-        
-        if let num = size{
-            pillState = num
-        }
-    }
-    
-    init?(name: String, size: Int, date: Date, endDate: Date, medType: MedicineType){
+    init?(name: String, size: Int? = 0, date: Date? = Date.distantPast, endDate: Date? = Date.distantFuture, medType: MedicineType? = nil, medTimes: MedicineTimes? = nil){
         self.name = name
         
         guard !name.isEmpty else {
@@ -73,18 +61,7 @@ class Medicine: NSObject{
         self.size = size
         self.date = date
         self.endDate = endDate
-        self.medType = medType
-    }
-    
-    init?(name: String, size: Int, date: Date, medType: MedicineType){
-        self.name = name
-        
-        guard !name.isEmpty else {
-            return nil
-        }
-        
-        self.size = size
-        self.date = date
+        self.times = medTimes
         self.medType = medType
     }
     
@@ -141,14 +118,14 @@ class Medicine: NSObject{
             "size": size!,
             "startDate" : date!,
             "endDate" : endDate!,
-            "medType" : medType!,
+            "medType" : medType?.rawValue,
             "medTimes" : [
                 "morning" : times!.morning!,
                 "lateMorning" : times!.lateMorning!,
                 "midday" : times!.midday!,
                 "afternoon" : times!.afternoon!,
                 "evening": times!.evening!,
-                "frequency" : times!.frequency!
+                "frequency" : times!.frequency?.rawValue
             ]
         ]
     }
