@@ -23,6 +23,7 @@ struct MedicineTimes {
 }
 
 class Medicine: NSObject{
+    var ref: String = ""
     var name: String
     var size: Int?{
         didSet{
@@ -88,14 +89,16 @@ class Medicine: NSObject{
             medType = MedicineType.tablet
         }
         
+        ref = snapshotValues["ref"] as! String
+        
         // get the medicine times:
         let medtimesValues = snapshot.childSnapshot(forPath: "medTimes").value as! [String: AnyObject]
-        print(medtimesValues)
+//        print(medtimesValues)
         var newTimes = MedicineTimes.init()
         newTimes.afternoon = medtimesValues["afternoon"] as? Int
         newTimes.evening = medtimesValues["evening"] as? Int
         let freqString = medtimesValues["frequency"] as? String
-        print(freqString!)
+//        print(freqString!)
         if freqString == MedicineTimes.interval.daily.rawValue{
             newTimes.frequency = MedicineTimes.interval.daily
         } else if freqString == MedicineTimes.interval.secondDay.rawValue{
@@ -118,6 +121,7 @@ class Medicine: NSObject{
             "startDate" : dateToString(from: date!),
             "endDate" : dateToString(from: endDate!),
             "medType" : medType?.rawValue ?? "pill",
+            "ref" : ref,
             "medTimes" : [
                 "morning" : times!.morning!,
                 "lateMorning" : times!.lateMorning!,
@@ -130,6 +134,8 @@ class Medicine: NSObject{
     }
     
     func dateToString(from inputDate: Date) -> String {
+        
+        
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
         formatter.timeStyle = DateFormatter.Style.none
@@ -138,6 +144,8 @@ class Medicine: NSObject{
     }
     
     func stringToDate(from inputString: String) -> Date? {
+        
+        
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
         formatter.timeStyle = DateFormatter.Style.none
