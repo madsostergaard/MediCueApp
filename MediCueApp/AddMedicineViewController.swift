@@ -49,11 +49,15 @@ class AddMedicineViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTidspunkt" {
-            let med = Medicine()
-        
-           
-//----------- set alle atributterne for medicinobjektet inden de sendes videre med skriftet af viewcontroller --
             
+            // create a MedicineTimes object and set interval
+            var medTimesTemp = MedicineTimes.init()
+            medTimesTemp.frequency = interval.titleForSegment(at: interval.selectedSegmentIndex).map { MedicineTimes.interval(rawValue: $0)}!
+            
+            print(medTimesTemp.frequency!)
+            
+            let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: <#T##Date?#>, endDate: <#T##Date?#>, medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
+        
             let addMedicineTimes = segue.destination as! AddMedicineTimesViewController
             addMedicineTimes.med = med
             
