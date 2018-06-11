@@ -14,13 +14,33 @@ class MedicineTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fillPills()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    func fillPills(){
+        let samplePills = [Medicine(name: "panodil"), Medicine(name: "Cola")]
+        
+        for pill in samplePills {
+            if let pill = pill {
+                medArr.append(pill)
+            }
+        }
+        sortPills()
+    }
+    
+    func sortPills(){
+        medArr.sort { (medArr1, medArr2) -> Bool in
+            //if medArr1.name != medArr2.name{
+                return medArr1.name < medArr2.name
+            //}
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,7 +63,8 @@ class MedicineTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "medsCell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = medArr[indexPath.row].name
+        cell.detailTextLabel?.text = "hahahahah"
 
         return cell
     }

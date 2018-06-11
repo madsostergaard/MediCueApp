@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
     @IBAction func unwindToLoginView(segue: UIStoryboardSegue){
         if let id = segue.identifier {
             print("in unwindToLoginView, sender: \(id)")
-            switch segue.identifier {
+            switch segue.identifier! {
             case "loggedOut":
                 print("Goodbye good sir!")
             case "cancelNewUser":

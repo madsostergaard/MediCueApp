@@ -17,6 +17,8 @@ class AddMedicineViewController: UIViewController {
     @IBOutlet weak var activateEndDateSwitch: UISwitch!
     @IBOutlet weak var endDateTextField: UITextField!
     
+    @IBOutlet weak var interval: UISegmentedControl!
+    
     @IBAction func activateChanged(_ sender: Any) {
         if activateEndDateSwitch.isOn{
             print("IsON!")
