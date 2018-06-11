@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>314540552534-ob38etcb1cb0f0q2h15joml84l8ounpt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.314540552534-ob38etcb1cb0f0q2h15joml84l8ounpt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAkmV5-nIFkM_UmV7SasXzsri9s59CxUb0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>314540552534</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dk.dtu.Mads.MediCueApp</string>
+	<key>PROJECT_ID</key>
+	<string>medicueapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>medicueapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:314540552534:ios:c8bd80bb18d1d0be</string>
+	<key>DATABASE_URL</key>
+	<string>https://medicueapp.firebaseio.com</string>
+</dict>
+</plist>

@@ -10,11 +10,11 @@ import Foundation
 import Firebase
 
 struct MedicineTimes {
-    var morning: Int?
-    var lateMorning: Int?
-    var midday: Int?
-    var afternoon: Int?
-    var evening: Int?
+    var morning: Int? = 0
+    var lateMorning: Int? = 0
+    var midday: Int? = 0
+    var afternoon: Int? = 0
+    var evening: Int? = 0
     var frequency: interval?
     
     enum interval: String {
@@ -69,18 +69,15 @@ class Medicine: NSObject{
         let snapshotValues = snapshot.value as! [String : AnyObject]
         name = snapshotValues["name"] as! String
         size = snapshotValues["size"] as? Int
+        super.init()
         
         // get Date strings
         let startDateString = snapshotValues["startDate"] as! String
         let endDateString = snapshotValues["endDate"] as! String
-        // format to Date object:
-        let formatter = DateFormatter()
-        formatter.dateStyle = DateFormatter.Style.medium
-        formatter.timeStyle = DateFormatter.Style.none
         
         // save to date objects
-        date = formatter.date(from: startDateString)
-        endDate = formatter.date(from: endDateString)
+        date = stringToDate(from: startDateString)
+        endDate = stringToDate(from: endDateString)
         
         let typeString = snapshotValues["medType"] as! String
         if typeString == MedicineType.injektion.rawValue{
@@ -92,11 +89,13 @@ class Medicine: NSObject{
         }
         
         // get the medicine times:
-        let medtimesValues = snapshot.value(forKey: "medTimes") as! [String: AnyObject]
+        let medtimesValues = snapshot.childSnapshot(forPath: "medTimes").value as! [String: AnyObject]
+        print(medtimesValues)
         var newTimes = MedicineTimes.init()
         newTimes.afternoon = medtimesValues["afternoon"] as? Int
         newTimes.evening = medtimesValues["evening"] as? Int
-        let freqString = medtimesValues["frequency"] as! String
+        let freqString = medtimesValues["frequency"] as? String
+        print(freqString!)
         if freqString == MedicineTimes.interval.daily.rawValue{
             newTimes.frequency = MedicineTimes.interval.daily
         } else if freqString == MedicineTimes.interval.secondDay.rawValue{
@@ -116,17 +115,33 @@ class Medicine: NSObject{
         return [
             "name": name,
             "size": size!,
-            "startDate" : date!,
-            "endDate" : endDate!,
-            "medType" : medType?.rawValue,
+            "startDate" : dateToString(from: date!),
+            "endDate" : dateToString(from: endDate!),
+            "medType" : medType?.rawValue ?? "pill",
             "medTimes" : [
                 "morning" : times!.morning!,
                 "lateMorning" : times!.lateMorning!,
                 "midday" : times!.midday!,
                 "afternoon" : times!.afternoon!,
                 "evening": times!.evening!,
-                "frequency" : times!.frequency?.rawValue
+                "frequency" : times!.frequency?.rawValue ?? "daily"
             ]
         ]
+    }
+    
+    func dateToString(from inputDate: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        
+        return formatter.string(from: inputDate)
+    }
+    
+    func stringToDate(from inputString: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        
+        return formatter.date(from: inputString)
     }
 }

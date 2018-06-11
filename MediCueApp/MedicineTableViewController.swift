@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 class MedicineTableViewController: UITableViewController {
     
     var medArr = [Medicine]()
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillPills()
+        ref = Database.database().reference()
+        ref.observe(.value, with: { snapshot -> Void in
+            var tempMeds: [Medicine] = []
+            
+            for item in snapshot.children{
+                let newMed = Medicine(snapshot: item as! DataSnapshot)
+                
+                tempMeds.append(newMed)
+            }
+            
+            self.medArr = tempMeds
+            self.tableView.reloadData()
+        })
+        
+        
+        //fillPills()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,14 +39,19 @@ class MedicineTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    func save(medicine: Medicine){
+        ref.childByAutoId().setValue(medicine.toAnyObject())
+    }
+    
     func fillPills(){
-        let samplePills = [Medicine(name: "panodil"), Medicine(name: "Cola")]
+        var medtimes = MedicineTimes.init()
+        medtimes.morning = 1
+        medtimes.evening = 2
+        medtimes.frequency = MedicineTimes.interval.daily
         
-        for pill in samplePills {
-            if let pill = pill {
-                medArr.append(pill)
-            }
-        }
+        let med = Medicine(name: "Panodil", size: 20, date: Date(timeIntervalSinceNow: 0), medType: Medicine.MedicineType.pill, medTimes: medtimes)
+
+        save(medicine: med!)
         sortPills()
     }
     
@@ -82,7 +104,7 @@ class MedicineTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -92,7 +114,7 @@ class MedicineTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

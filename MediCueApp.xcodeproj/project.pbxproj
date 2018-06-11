@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0903F88320CA99A80099E104 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88220CA99A80099E104 /* AddMedicineViewController.swift */; };
 		0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */; };
+		0903F88720CE922D0099E104 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903F88620CE922D0099E104 /* GoogleService-Info.plist */; };
 		0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53D20C963AF003B2334 /* ProgressViewController.swift */; };
 		0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53F20C963C2003B2334 /* CalendarViewController.swift */; };
 		0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54120C963F6003B2334 /* MedicineTableViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		0903F88220CA99A80099E104 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
 		0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineTimesViewController.swift; sourceTree = "<group>"; };
+		0903F88620CE922D0099E104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0960C53D20C963AF003B2334 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		0960C53F20C963C2003B2334 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0960C54120C963F6003B2334 /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				09EF949720C92FB60034428E /* Assets.xcassets */,
 				09EF949920C92FB60034428E /* LaunchScreen.storyboard */,
 				09EF949C20C92FB60034428E /* Info.plist */,
+				0903F88620CE922D0099E104 /* GoogleService-Info.plist */,
 				09EF94C220C948320034428E /* LoginViewController.swift */,
 				0960C53D20C963AF003B2334 /* ProgressViewController.swift */,
 				0960C53F20C963C2003B2334 /* CalendarViewController.swift */,
@@ -317,6 +320,7 @@
 			files = (
 				09EF949B20C92FB60034428E /* LaunchScreen.storyboard in Resources */,
 				09EF949820C92FB60034428E /* Assets.xcassets in Resources */,
+				0903F88720CE922D0099E104 /* GoogleService-Info.plist in Resources */,
 				09EF949620C92FB50034428E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
