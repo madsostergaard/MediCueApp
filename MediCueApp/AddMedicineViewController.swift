@@ -55,7 +55,7 @@ class AddMedicineViewController: UIViewController {
             // create a MedicineTimes object and set interval
             var medTimesTemp = MedicineTimes.init()
             
-            print(interval.titleForSegment(at: interval.selectedSegmentIndex)!)
+            //print(interval.titleForSegment(at: interval.selectedSegmentIndex)!)
             
             medTimesTemp.frequency = MedicineTimes.interval(rawValue: interval.titleForSegment(at: interval.selectedSegmentIndex)!)
             
@@ -63,7 +63,7 @@ class AddMedicineViewController: UIViewController {
             
             let testMed = Medicine(name: "TestMed")
             let medType: Medicine.MedicineType
-            print(medTimesTemp.frequency!)
+           // print(medTimesTemp.frequency!)
             let typeString = typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!
             if typeString == Medicine.MedicineType.injektion.rawValue{
                medType = Medicine.MedicineType.injektion
@@ -72,7 +72,7 @@ class AddMedicineViewController: UIViewController {
             } else{
                 medType = Medicine.MedicineType.tablet
             }
-            
+    
            let med = Medicine(name: nameTextField.text!,
                               size: Int(packageCountTextField.text!),
                               date: testMed?.stringToDate(from: startDateTextField.text!),
