@@ -27,10 +27,6 @@
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="F9K-vy-RLv">
-                                <rect key="frame" x="177.5" y="254" width="20" height="20"/>
-                                <color key="color" name="SecondColor"/>
-                            </activityIndicatorView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-w7-Xt3">
                                 <rect key="frame" x="50" y="294" width="275" height="30"/>
                                 <nil key="textColor"/>
@@ -68,14 +64,12 @@
                             <constraint firstItem="yDW-Ox-2aI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="D0E-n4-6tm"/>
                             <constraint firstItem="D0M-BH-oEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DK0-73-gzQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KsC-jj-NgI" secondAttribute="trailing" constant="20" id="Ho9-zC-2vW"/>
-                            <constraint firstItem="F9K-vy-RLv" firstAttribute="top" secondItem="KsC-jj-NgI" secondAttribute="bottom" constant="20" id="IPp-Mz-KtH"/>
+                            <constraint firstItem="hCQ-w7-Xt3" firstAttribute="top" secondItem="KsC-jj-NgI" secondAttribute="bottom" constant="60" id="Kui-UP-OeX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hCQ-w7-Xt3" secondAttribute="trailing" constant="50" id="LIa-Lx-pYf"/>
-                            <constraint firstItem="hCQ-w7-Xt3" firstAttribute="top" secondItem="F9K-vy-RLv" secondAttribute="bottom" constant="20" id="SKr-Jw-r7M"/>
                             <constraint firstItem="D0M-BH-oEr" firstAttribute="top" secondItem="yDW-Ox-2aI" secondAttribute="bottom" constant="10" id="Snz-Ut-BxE"/>
                             <constraint firstItem="UbI-Dc-vtD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="a72-Wy-kvG"/>
                             <constraint firstItem="KsC-jj-NgI" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="cMa-Zg-lbo"/>
                             <constraint firstItem="KsC-jj-NgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jW9-ly-Cjv"/>
-                            <constraint firstItem="F9K-vy-RLv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lXN-hL-HoR"/>
                             <constraint firstItem="KsC-jj-NgI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nPU-zX-lIq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yDW-Ox-2aI" secondAttribute="trailing" constant="50" id="odd-5Q-yhm"/>
                             <constraint firstItem="UbI-Dc-vtD" firstAttribute="top" secondItem="hCQ-w7-Xt3" secondAttribute="bottom" constant="10" id="pdt-6N-h8x"/>
@@ -536,12 +530,12 @@
             </objects>
             <point key="canvasLocation" x="9279.2000000000007" y="32.833583208395808"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab View Controller-->
         <scene sceneID="LzQ-6N-ujM">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9a7-b4-E5L" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9a7-b4-E5L" customClass="MainTabViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pmu-we-wvR">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pmu-we-wvR" customClass="MainTabBar" customModule="MediCueApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="MainColor"/>
@@ -553,6 +547,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="theTabBar" destination="pmu-we-wvR" id="uNG-cR-Bw2"/>
                         <segue destination="JgF-eT-Pbg" kind="relationship" relationship="viewControllers" id="EWe-Bn-cW5"/>
                         <segue destination="faA-M0-k8F" kind="relationship" relationship="viewControllers" id="ruq-vv-fZA"/>
                         <segue destination="7gv-Rj-eMb" kind="relationship" relationship="viewControllers" id="530-IO-c8q"/>
