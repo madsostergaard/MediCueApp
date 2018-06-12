@@ -10,6 +10,8 @@ import UIKit
 
 class AddMedicineViewController: UIViewController {
 
+    var med: Medicine?
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
@@ -49,17 +51,38 @@ class AddMedicineViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTidspunkt" {
-            let med = Medicine(name: nameTextField.text!)
-            //med?.date = startDateTextField.text! as Date
-           
-//----------- set alle atributterne for medicinobjektet inden de sendes videre med skriftet af viewcontroller --
             
-            let addMedicineTimes = segue.destination as! AddMedicineTimesViewController
-            addMedicineTimes.med = med
+            // create a MedicineTimes object and set interval
+            var medTimesTemp = MedicineTimes.init()
+            
+            print(interval.titleForSegment(at: interval.selectedSegmentIndex)!)
+            
+            medTimesTemp.frequency = MedicineTimes.interval(rawValue: interval.titleForSegment(at: interval.selectedSegmentIndex)!)
+            
+            
+            
+            print(medTimesTemp.frequency!)
+            
+           // let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: self.med?.stringToDate(from: startDateTextField.text!), endDate: self.med?.stringToDate(from: endDateTextField.text!), medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
+            
+            let medi = Medicine(name: "panodil")
+            
+            let nav = segue.destination as! UINavigationController
+            if let navTopViewVC = nav.topViewController {
+                print("TOPVIEW NOT NIL")
+            }
+            else {
+                print("TOPVIEW NIL")
+            }
+            if let addMedicineTimes = nav.topViewController as? AddMedicineTimesViewController {
+                addMedicineTimes.med = medi
+            }
+            else {
+                print("NOT ADDMEDICINEVC")
+            }
             
         }
     }
-    
     
     @objc func startDatePickerValueChanged(sender: UIDatePicker){
         let formatter = DateFormatter()

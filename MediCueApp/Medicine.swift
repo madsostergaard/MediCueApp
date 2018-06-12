@@ -18,7 +18,9 @@ struct MedicineTimes {
     var frequency: interval?
     
     enum interval: String {
-        case daily, secondDay, weekly
+        case daily = "Dagligt"
+        case secondDay = "Hver 2. dag"
+        case weekly = "Ugentligt"
     }
 }
 
