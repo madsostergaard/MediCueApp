@@ -59,7 +59,7 @@ class MedicineTableViewController: UITableViewController {
         
         let med = Medicine(name: "Panodil", size: 20, date: Date(timeIntervalSinceNow: 0), medType: Medicine.MedicineType.pill, medTimes: medtimes)
 
-        save(medicine: med!)
+        //save(medicine: med!)
         sortPills()
     }
     
@@ -92,10 +92,22 @@ class MedicineTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "medsCell", for: indexPath)
-
-        cell.textLabel?.text = medArr[indexPath.row].name
-        cell.detailTextLabel?.text = "hahahahah"
+        let cell: MedicineCell = tableView.dequeueReusableCell(withIdentifier: "medsCell", for: indexPath) as! MedicineCell
+        
+        let thisMedicine = medArr[indexPath.row]
+        
+        cell.medicineNameLabel?.text = thisMedicine.name
+        cell.medicineFreqLabel?.text = thisMedicine.times?.frequency?.rawValue
+        
+        if let thisType = thisMedicine.medType{
+        switch thisType{
+        case Medicine.MedicineType.injektion:
+            cell.medicineIcon.image = UIImage(named: "injectionIcon.pdf")
+        case Medicine.MedicineType.pill:
+            cell.medicineIcon.image = UIImage(named: "pillIcon.pdf")
+        case Medicine.MedicineType.tablet:
+            cell.medicineIcon.image = UIImage(named: "tabletIcon.pdf")
+            }}
 
         return cell
     }
@@ -163,4 +175,10 @@ class MedicineTableViewController: UITableViewController {
     }
     
 
+}
+
+class MedicineCell: UITableViewCell{
+    @IBOutlet weak var medicineIcon: UIImageView!
+    @IBOutlet weak var medicineFreqLabel: UILabel!
+    @IBOutlet weak var medicineNameLabel: UILabel!
 }
