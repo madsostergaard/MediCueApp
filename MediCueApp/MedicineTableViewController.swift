@@ -16,7 +16,7 @@ class MedicineTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("medicine")
         ref.observe(.value, with: { snapshot -> Void in
             var tempMeds: [Medicine] = []
             
@@ -30,8 +30,9 @@ class MedicineTableViewController: UITableViewController {
             self.tableView.reloadData()
         })
         
+        // add panodil test object to database
+        fillPills()
         
-        //fillPills()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,9 +41,16 @@ class MedicineTableViewController: UITableViewController {
     }
     
     func save(medicine: Medicine){
-        ref.childByAutoId().setValue(medicine.toAnyObject())
+        //let thisRef = ref.childByAutoId().setValue()
+        
+        let thisRef = self.ref.childByAutoId()
+        
+        medicine.ref = thisRef.key
+        thisRef.setValue(medicine.toAnyObject())
+        //print(thisRef)
     }
     
+    // function to create a test medicine
     func fillPills(){
         var medtimes = MedicineTimes.init()
         medtimes.morning = 1
@@ -55,6 +63,7 @@ class MedicineTableViewController: UITableViewController {
         sortPills()
     }
     
+    // sort medicine alphabetically
     func sortPills(){
         medArr.sort { (medArr1, medArr2) -> Bool in
             //if medArr1.name != medArr2.name{
@@ -109,7 +118,13 @@ class MedicineTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            let medicineItem = medArr[indexPath.row]
+            let thisRef = self.ref.child(medicineItem.ref)
+            //print(thisRef)
+            thisRef.removeValue()
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -131,14 +146,21 @@ class MedicineTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "toMedicineDetails"{
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                let detailedMed = medArr[indexPath.row]
+                
+                // send detailedMed to new view controller
+            }
+        }
     }
-    */
+    
 
 }
