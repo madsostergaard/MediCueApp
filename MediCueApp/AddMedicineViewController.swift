@@ -10,6 +10,8 @@ import UIKit
 
 class AddMedicineViewController: UIViewController {
 
+    var med: Medicine?
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
@@ -52,15 +54,19 @@ class AddMedicineViewController: UIViewController {
             
             // create a MedicineTimes object and set interval
             var medTimesTemp = MedicineTimes.init()
-            medTimesTemp.frequency = interval.titleForSegment(at: interval.selectedSegmentIndex).map { MedicineTimes.interval(rawValue: $0)}!
+            
+            print(interval.titleForSegment(at: interval.selectedSegmentIndex)!)
+            
+            medTimesTemp.frequency = MedicineTimes.interval(rawValue: interval.titleForSegment(at: interval.selectedSegmentIndex)!)
+            
+            
             
             print(medTimesTemp.frequency!)
             
-            let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: <#T##Date?#>, endDate: <#T##Date?#>, medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
+            let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: self.med?.stringToDate(from: startDateTextField.text!), endDate: self.med?.stringToDate(from: endDateTextField.text!), medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
         
             let addMedicineTimes = segue.destination as! AddMedicineTimesViewController
             addMedicineTimes.med = med
-            
         }
     }
     

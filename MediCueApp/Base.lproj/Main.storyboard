@@ -394,7 +394,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yfh-oG-WJM" kind="presentation" identifier="toTidspunkt" id="cpU-hk-xWY"/>
+                                    <segue destination="yfh-oG-WJM" kind="show" identifier="toTidspunkt" id="cpU-hk-xWY"/>
                                 </connections>
                             </button>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -724,10 +724,10 @@
             </objects>
             <point key="canvasLocation" x="5572" y="35.532233883058474"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Medicine Times View Controller-->
         <scene sceneID="TY9-oZ-RWN">
             <objects>
-                <tableViewController id="e1A-n2-srJ" sceneMemberID="viewController">
+                <tableViewController id="e1A-n2-srJ" customClass="AddMedicineTimesViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BK2-XO-kKZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

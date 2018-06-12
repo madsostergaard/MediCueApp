@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMedicineTimesViewController: UIViewController {
+class AddMedicineTimesViewController: UITableViewController {
 
     var med: Medicine?{
         didSet{
