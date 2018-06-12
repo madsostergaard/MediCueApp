@@ -16,7 +16,7 @@ class MedicineTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("medicine")
         ref.observe(.value, with: { snapshot -> Void in
             var tempMeds: [Medicine] = []
             
