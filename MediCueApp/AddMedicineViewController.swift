@@ -63,13 +63,26 @@ class AddMedicineViewController: UIViewController {
             
             print(medTimesTemp.frequency!)
             
-            let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: self.med?.stringToDate(from: startDateTextField.text!), endDate: self.med?.stringToDate(from: endDateTextField.text!), medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
-        
-            let addMedicineTimes = segue.destination as! AddMedicineTimesViewController
-            addMedicineTimes.med = med
+           // let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: self.med?.stringToDate(from: startDateTextField.text!), endDate: self.med?.stringToDate(from: endDateTextField.text!), medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
+            
+            let medi = Medicine(name: "panodil")
+            
+            let nav = segue.destination as! UINavigationController
+            if let navTopViewVC = nav.topViewController {
+                print("TOPVIEW NOT NIL")
+            }
+            else {
+                print("TOPVIEW NIL")
+            }
+            if let addMedicineTimes = nav.topViewController as? AddMedicineTimesViewController {
+                addMedicineTimes.med = medi
+            }
+            else {
+                print("NOT ADDMEDICINEVC")
+            }
+            
         }
     }
-    
     
     @objc func startDatePickerValueChanged(sender: UIDatePicker){
         let formatter = DateFormatter()
