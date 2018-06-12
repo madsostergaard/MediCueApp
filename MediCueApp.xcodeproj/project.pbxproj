@@ -10,6 +10,7 @@
 		0903F88320CA99A80099E104 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88220CA99A80099E104 /* AddMedicineViewController.swift */; };
 		0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */; };
 		0903F88720CE922D0099E104 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903F88620CE922D0099E104 /* GoogleService-Info.plist */; };
+		0903F88920CFC9890099E104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88820CFC9890099E104 /* HomeViewController.swift */; };
 		0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53D20C963AF003B2334 /* ProgressViewController.swift */; };
 		0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53F20C963C2003B2334 /* CalendarViewController.swift */; };
 		0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54120C963F6003B2334 /* MedicineTableViewController.swift */; };
@@ -50,6 +51,7 @@
 		0903F88220CA99A80099E104 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
 		0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineTimesViewController.swift; sourceTree = "<group>"; };
 		0903F88620CE922D0099E104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0903F88820CFC9890099E104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0960C53D20C963AF003B2334 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		0960C53F20C963C2003B2334 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0960C54120C963F6003B2334 /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0960C54720CA6BAE003B2334 /* AddNewUserViewController.swift */,
 				0903F88220CA99A80099E104 /* AddMedicineViewController.swift */,
 				0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */,
+				0903F88820CFC9890099E104 /* HomeViewController.swift */,
 			);
 			path = MediCueApp;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */,
 				0960C54820CA6BAE003B2334 /* AddNewUserViewController.swift in Sources */,
 				0960C54620CA60FB003B2334 /* Medicine.swift in Sources */,
+				0903F88920CFC9890099E104 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
