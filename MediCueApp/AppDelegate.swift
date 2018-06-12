@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        //        Hvis oliver laver lort i den:
+//        let ref = Database.database().reference()
+//        for i in 1...10000 {
+//            let tempRef = ref.child(String(i))
+//            tempRef.removeValue()
+//        }
+        
         return true
     }
 
