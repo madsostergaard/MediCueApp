@@ -7,33 +7,143 @@
 //
 
 import UIKit
+import CalendarKit
+import DateToolsSwift
 
-class CalendarViewController: UIViewController {
+enum SelectedStyle {
+    case Dark
+    case Light
+}
 
-    @IBOutlet weak var tuesdayLabel: UILabel!
-    @IBOutlet weak var mondayLabel: UILabel!
-    @IBOutlet weak var wedLabel: UILabel!
-    @IBOutlet weak var thursLabel: UILabel!
-    @IBOutlet weak var fridayLabel: UILabel!
-    @IBOutlet weak var sundayLabel: UILabel!
-    @IBOutlet weak var saturdayLabel: UILabel!
+// From example of CalendarKit:
+
+class CalendarViewController: DayViewController, DatePickerControllerDelegate{
+    
+    var data = [["Breakfast at Tiffany's",
+                 "New York, 5th avenue"],
+                
+                ["Workout",
+                 "Tufteparken"],
+                
+                ["Meeting with Alex",
+                 "Home",
+                 "Oslo, Tjuvholmen"],
+                
+                ["Beach Volleyball",
+                 "Ipanema Beach",
+                 "Rio De Janeiro"],
+                
+                ["WWDC",
+                 "Moscone West Convention Center",
+                 "747 Howard St"],
+                
+                ["Google I/O",
+                 "Shoreline Amphitheatre",
+                 "One Amphitheatre Parkway"],
+                
+                ["✈️️ to Svalbard ❄️️❄️️❄️️❤️️",
+                 "Oslo Gardermoen"],
+                
+                ["💻📲 Developing CalendarKit",
+                 "🌍 Worldwide"],
+                
+                ["Software Development Lecture",
+                 "Mikpoli MB310",
+                 "Craig Federighi"],
+                
+                ]
+    
+    var colors = [UIColor.blue,
+                  UIColor.yellow,
+                  UIColor.green,
+                  UIColor.red]
+    
+    var currentStyle = SelectedStyle.Light
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CalendarViewController.tapFunction(sender:)))
-        tuesdayLabel.addGestureRecognizer(tap)
-        mondayLabel.addGestureRecognizer(tap)
-        wedLabel.addGestureRecognizer(tap)
-        thursLabel.addGestureRecognizer(tap)
-        sundayLabel.addGestureRecognizer(tap)
-        saturdayLabel.addGestureRecognizer(tap)
+        //title = "CalendarKit Demo"
+        
+        navigationController?.navigationBar.isTranslucent = false
+        dayView.autoScrollToFirstEvent = true
+        reloadData()
     }
     
-    @objc func tapFunction(sender:UITapGestureRecognizer){
-        print("Tabbed: \(sender.description)")
+    func datePicker(controller: DatePickerController, didSelect date: Date?) {
+        if let date = date {
+            dayView.state?.move(to: date)
+        }
+        controller.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: EventDataSource
+    override func eventsForDate(_ date: Date) -> [EventDescriptor] {
+        var date = date.add(TimeChunk.dateComponents(hours: Int(arc4random_uniform(10) + 5)))
+        var events = [Event]()
+        
+        for i in 0...4 {
+            let event = Event()
+            let duration = Int(arc4random_uniform(160) + 60)
+            let datePeriod = TimePeriod(beginning: date,
+                                        chunk: TimeChunk.dateComponents(minutes: duration))
+            
+            event.startDate = datePeriod.beginning!
+            event.endDate = datePeriod.end!
+            
+            var info = data[Int(arc4random_uniform(UInt32(data.count)))]
+            info.append("\(datePeriod.beginning!.format(with: "dd.MM.YYYY"))")
+            info.append("\(datePeriod.beginning!.format(with: "HH:mm")) - \(datePeriod.end!.format(with: "HH:mm"))")
+            event.text = info.reduce("", {$0 + $1 + "\n"})
+            event.color = colors[Int(arc4random_uniform(UInt32(colors.count)))]
+            //event.isAllDay = Int(arc4random_uniform(2)) % 2 == 0
+            
+            // Event styles are updated independently from CalendarStyle
+            // hence the need to specify exact colors in case of Dark style
+            if currentStyle == .Dark {
+                event.textColor = textColorForEventInDarkTheme(baseColor: event.color)
+                event.backgroundColor = event.color.withAlphaComponent(0.6)
+            }
+            
+            events.append(event)
+            
+            let nextOffset = Int(arc4random_uniform(250) + 40)
+            date = date.add(TimeChunk.dateComponents(minutes: nextOffset))
+            event.userInfo = String(i)
+        }
+        
+        return events
+    }
+    
+    private func textColorForEventInDarkTheme(baseColor: UIColor) -> UIColor {
+        var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        baseColor.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+        return UIColor(hue: h, saturation: s * 0.3, brightness: b, alpha: a)
+    }
+    
+    // MARK: DayViewDelegate
+    override func dayViewDidSelectEventView(_ eventView: EventView) {
+        guard let descriptor = eventView.descriptor as? Event else {
+            return
+        }
+        print("Event has been selected: \(descriptor) \(String(describing: descriptor.userInfo))")
+    }
+    
+    override func dayViewDidLongPressEventView(_ eventView: EventView) {
+        guard let descriptor = eventView.descriptor as? Event else {
+            return
+        }
+        print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
+    }
+    
+    override func dayView(dayView: DayView, willMoveTo date: Date) {
+        print("DayView = \(dayView) will move to: \(date)")
+    }
+    
+    override func dayView(dayView: DayView, didMoveTo date: Date) {
+        print("DayView = \(dayView) did move to: \(date)")
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

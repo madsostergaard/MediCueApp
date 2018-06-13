@@ -14,12 +14,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let commands = ["MorningTime","FormiddagTime","MiddagTime",
+                    "EftermiddagTime","AftenTime","NatTime"]
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
         
+        let setup = false
+        if setup {
+        UserDefaults.standard.set("07:00", forKey: commands[0])
+        UserDefaults.standard.set("10:00", forKey: commands[1])
+        UserDefaults.standard.set("12:00", forKey: commands[2])
+        UserDefaults.standard.set("16:00", forKey: commands[3])
+        UserDefaults.standard.set("18:00", forKey: commands[4])
+        UserDefaults.standard.set("22:00", forKey: commands[5])
+        }
         //        Hvis oliver laver lort i den:
 //        let ref = Database.database().reference()
 //        for i in 1...10000 {
