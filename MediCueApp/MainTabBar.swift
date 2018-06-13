@@ -14,9 +14,10 @@ class MainTabViewController: UITabBarController{
     @IBOutlet weak var theTabBar: MainTabBar!
     
     override func viewDidLoad() {
-        print("Am I OOKAY?!")
+        super.viewDidLoad()
         
         setController()
+        changeToHome()
     }
     
     func setController(){
@@ -53,7 +54,8 @@ class MainTabBar: UITabBar{
         middleButton.backgroundColor = UIColor(named: "MainColor")
         middleButton.layer.cornerRadius = 35
         middleButton.layer.masksToBounds = true
-        if let image = UIImage(named: "homeicon.png"){
+        if let image = UIImage(named: "homeicon.png")?.withRenderingMode(.alwaysTemplate){
+            middleButton.imageView?.tintColor = UIColor.white
             middleButton.setImage(image, for: .normal)
         }
         middleButton.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: 0)
