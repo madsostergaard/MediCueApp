@@ -309,7 +309,7 @@
         <scene sceneID="3um-QE-Mct">
             <objects>
                 <tableViewController id="na2-MQ-P0Y" customClass="SetTimesTableViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" id="1Lx-ba-e7O">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="90" estimatedRowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" id="1Lx-ba-e7O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -634,6 +634,7 @@
                                     <outlet property="medicineFreqLabel" destination="zY8-lJ-C4Q" id="6mT-jj-z3n"/>
                                     <outlet property="medicineIcon" destination="CGq-w1-LZ8" id="SR9-Uu-gCS"/>
                                     <outlet property="medicineNameLabel" destination="SCF-VE-9ZZ" id="Dlc-3D-xPl"/>
+                                    <segue destination="hqh-hw-X3b" kind="show" identifier="toMedDetails" id="Ujp-zX-eJp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -654,6 +655,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNM-fy-hHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2709.5999999999999" y="32.833583208395808"/>
+        </scene>
+        <!--Detaljer-->
+        <scene sceneID="1Zl-15-zAV">
+            <objects>
+                <viewController title="Detaljer" id="hqh-hw-X3b" customClass="MedicineDetailsViewController" customModule="MediCueApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kle-Hk-e1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="injectionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-dJ-RhK">
+                                <rect key="frame" x="20" y="84" width="72" height="72"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="z6v-nl-uSm">
+                                <rect key="frame" x="20" y="166" width="335" height="432"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn4-Tc-WM6">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="108"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCJ-tB-mTY">
+                                        <rect key="frame" x="0.0" y="108" width="335" height="108"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-Lc-Ykw">
+                                        <rect key="frame" x="0.0" y="216" width="335" height="108"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tY-40-Oqk">
+                                        <rect key="frame" x="0.0" y="324" width="335" height="108"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU0-8j-65s">
+                                <rect key="frame" x="154" y="104" width="66.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ahD-c0-sJM" firstAttribute="bottom" secondItem="z6v-nl-uSm" secondAttribute="bottom" constant="20" id="Acd-G6-BRQ"/>
+                            <constraint firstItem="DU0-8j-65s" firstAttribute="centerX" secondItem="kle-Hk-e1G" secondAttribute="centerX" id="FdF-rJ-GZ8"/>
+                            <constraint firstItem="z6v-nl-uSm" firstAttribute="leading" secondItem="ahD-c0-sJM" secondAttribute="leading" constant="20" id="JHl-KQ-K5E"/>
+                            <constraint firstItem="DU0-8j-65s" firstAttribute="top" secondItem="ahD-c0-sJM" secondAttribute="top" constant="40" id="NNj-57-Xr7"/>
+                            <constraint firstItem="z6v-nl-uSm" firstAttribute="top" secondItem="2dJ-dJ-RhK" secondAttribute="bottom" constant="10" id="TDT-CO-C11"/>
+                            <constraint firstItem="2dJ-dJ-RhK" firstAttribute="top" secondItem="ahD-c0-sJM" secondAttribute="top" constant="20" id="aUM-Ir-9iW"/>
+                            <constraint firstItem="ahD-c0-sJM" firstAttribute="trailing" secondItem="z6v-nl-uSm" secondAttribute="trailing" constant="20" id="rZO-Yr-12T"/>
+                            <constraint firstItem="2dJ-dJ-RhK" firstAttribute="leading" secondItem="ahD-c0-sJM" secondAttribute="leading" constant="20" id="zz3-sb-0bh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ahD-c0-sJM"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="DU0-8j-65s" id="L1M-Pt-Hs5"/>
+                        <outlet property="typeImageView" destination="2dJ-dJ-RhK" id="TNL-Dl-eAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONa-Dj-sHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3793" y="-136"/>
         </scene>
         <!--Opret-->
         <scene sceneID="Yth-Wh-Nau">
@@ -1137,7 +1204,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3c-hH-QAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3790" y="33"/>
+            <point key="canvasLocation" x="3793" y="600"/>
         </scene>
         <!--Add Medicine Times View Controller-->
         <scene sceneID="TY9-oZ-RWN">
@@ -1288,11 +1355,27 @@
             </objects>
             <point key="canvasLocation" x="6383.1999999999998" y="37.331334332833585"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="khU-JG-ejs">
+            <objects>
+                <viewController id="d7e-Q6-IP3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Rs-Nu-qUg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Bu5-IB-hRC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QuD-Rj-DIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4916" y="-862"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MediCueLogo" width="2754" height="771"/>
         <image name="calendarLogo" width="25" height="25"/>
         <image name="homeicon" width="25" height="25"/>
+        <image name="injectionIcon" width="72" height="72"/>
         <image name="medicineLogo" width="25" height="25"/>
         <image name="pillBoxIcon" width="439" height="443"/>
         <image name="progressImagePlaceholder" width="387" height="563"/>

@@ -9,49 +9,52 @@
 import UIKit
 import CalendarKit
 import DateToolsSwift
+import Firebase
 
 enum SelectedStyle {
     case Dark
     case Light
 }
 
+
+
 // From example of CalendarKit:
 
 class CalendarViewController: DayViewController, DatePickerControllerDelegate{
     
-    var data = [["Breakfast at Tiffany's",
-                 "New York, 5th avenue"],
-                
-                ["Workout",
-                 "Tufteparken"],
-                
-                ["Meeting with Alex",
-                 "Home",
-                 "Oslo, Tjuvholmen"],
-                
-                ["Beach Volleyball",
-                 "Ipanema Beach",
-                 "Rio De Janeiro"],
-                
-                ["WWDC",
-                 "Moscone West Convention Center",
-                 "747 Howard St"],
-                
-                ["Google I/O",
-                 "Shoreline Amphitheatre",
-                 "One Amphitheatre Parkway"],
-                
-                ["✈️️ to Svalbard ❄️️❄️️❄️️❤️️",
-                 "Oslo Gardermoen"],
-                
-                ["💻📲 Developing CalendarKit",
-                 "🌍 Worldwide"],
-                
-                ["Software Development Lecture",
-                 "Mikpoli MB310",
-                 "Craig Federighi"],
-                
-                ]
+//    var data = [["Breakfast at Tiffany's",
+//                 "New York, 5th avenue"],
+//
+//                ["Workout",
+//                 "Tufteparken"],
+//
+//                ["Meeting with Alex",
+//                 "Home",
+//                 "Oslo, Tjuvholmen"],
+//
+//                ["Beach Volleyball",
+//                 "Ipanema Beach",
+//                 "Rio De Janeiro"],
+//
+//                ["WWDC",
+//                 "Moscone West Convention Center",
+//                 "747 Howard St"],
+//
+//                ["Google I/O",
+//                 "Shoreline Amphitheatre",
+//                 "One Amphitheatre Parkway"],
+//
+//                ["✈️️ to Svalbard ❄️️❄️️❄️️❤️️",
+//                 "Oslo Gardermoen"],
+//
+//                ["💻📲 Developing CalendarKit",
+//                 "🌍 Worldwide"],
+//
+//                ["Software Development Lecture",
+//                 "Mikpoli MB310",
+//                 "Craig Federighi"],
+//
+//                ]
     
     var colors = [UIColor.blue,
                   UIColor.yellow,
@@ -60,9 +63,43 @@ class CalendarViewController: DayViewController, DatePickerControllerDelegate{
     
     var currentStyle = SelectedStyle.Light
     
+    var newData = [[String]]()
+    var medArr = [Medicine](){
+        didSet{
+            var num: Int = 0
+            for medicine in medArr{
+                if let number = medicine.times?.morning{
+                    num = number
+                }
+                for _ in 1...5 {
+                    let makeSomeText = [medicine.name, "Antal piller: \(num)"]
+                    newData.append(makeSomeText)
+                }
+            }
+            reloadData()
+        }
+    }
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ref = Database.database().reference().child("medicine")
+        ref.observe(.value, with: { snapshot -> Void in
+            var tempMeds: [Medicine] = []
+            
+            for item in snapshot.children{
+                let newMed = Medicine(snapshot: item as! DataSnapshot)
+                
+                tempMeds.append(newMed)
+            }
+            
+            self.medArr = tempMeds
+        })
+        
+        
+        
+        
         //title = "CalendarKit Demo"
         
         navigationController?.navigationBar.isTranslucent = false
@@ -84,16 +121,18 @@ class CalendarViewController: DayViewController, DatePickerControllerDelegate{
         
         for i in 0...4 {
             let event = Event()
-            let duration = Int(arc4random_uniform(160) + 60)
+            //let duration = Int(arc4random_uniform(160) + 60)
             let datePeriod = TimePeriod(beginning: date,
-                                        chunk: TimeChunk.dateComponents(minutes: duration))
+                                        chunk: TimeChunk.dateComponents(minutes: 60))
             
             event.startDate = datePeriod.beginning!
             event.endDate = datePeriod.end!
             
-            var info = data[Int(arc4random_uniform(UInt32(data.count)))]
+            if newData.count != 0 {
+            var info = newData[Int(arc4random_uniform(UInt32(newData.count)))]
             info.append("\(datePeriod.beginning!.format(with: "dd.MM.YYYY"))")
-            info.append("\(datePeriod.beginning!.format(with: "HH:mm")) - \(datePeriod.end!.format(with: "HH:mm"))")
+            info.append("\(datePeriod.beginning!.format(with: "HH:mm"))")
+                //) -\(datePeriod.end!.format(with: "HH:mm"))")
             event.text = info.reduce("", {$0 + $1 + "\n"})
             event.color = colors[Int(arc4random_uniform(UInt32(colors.count)))]
             //event.isAllDay = Int(arc4random_uniform(2)) % 2 == 0
@@ -110,7 +149,7 @@ class CalendarViewController: DayViewController, DatePickerControllerDelegate{
             let nextOffset = Int(arc4random_uniform(250) + 40)
             date = date.add(TimeChunk.dateComponents(minutes: nextOffset))
             event.userInfo = String(i)
-        }
+            }}
         
         return events
     }
