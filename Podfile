@@ -9,6 +9,7 @@ target 'MediCueApp' do
   pod 'EstimoteSDK'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'CalendarKit'
 
   target 'MediCueAppTests' do
     inherit! :search_paths
