@@ -5,6 +5,9 @@ target 'MediCueApp' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods for BEMCheckBox
+  pod ‘BEMCheckBox’
+
   # Pods for MediCueApp
   pod 'EstimoteSDK'
   pod 'Firebase/Core'
