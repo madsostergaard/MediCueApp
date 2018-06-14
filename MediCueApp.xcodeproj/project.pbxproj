@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0903F88320CA99A80099E104 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88220CA99A80099E104 /* AddMedicineViewController.swift */; };
 		0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */; };
-		0903F88720CE922D0099E104 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903F88620CE922D0099E104 /* GoogleService-Info.plist */; };
 		0903F88920CFC9890099E104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88820CFC9890099E104 /* HomeViewController.swift */; };
 		0903F88B20CFD1D30099E104 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88A20CFD1D30099E104 /* MainTabBar.swift */; };
 		0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53D20C963AF003B2334 /* ProgressViewController.swift */; };
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		0903F88220CA99A80099E104 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
 		0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineTimesViewController.swift; sourceTree = "<group>"; };
-		0903F88620CE922D0099E104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0903F88820CFC9890099E104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0903F88A20CFD1D30099E104 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		0960C53D20C963AF003B2334 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +87,7 @@
 		3ED2C9906FDAF88BB4E711C7 /* Pods-MediCueAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppTests/Pods-MediCueAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AE4E0C0997790CD521CD710 /* Pods_MediCueApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediCueApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0DE604B85D1E9F3FD73A34 /* Pods-MediCueApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp.release.xcconfig"; sourceTree = "<group>"; };
+		D91AB53F20D25DF2003A79D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9C065B220D120C70030F43B /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA96A5A2BEE1CA6BFF8E934 /* Pods-MediCueAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppUITests/Pods-MediCueAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEE37913F97DB5E2F321037C /* Pods_MediCueAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediCueAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +156,7 @@
 				09EF949720C92FB60034428E /* Assets.xcassets */,
 				09EF949920C92FB60034428E /* LaunchScreen.storyboard */,
 				09EF949C20C92FB60034428E /* Info.plist */,
-				0903F88620CE922D0099E104 /* GoogleService-Info.plist */,
+				D91AB53F20D25DF2003A79D6 /* GoogleService-Info.plist */,
 				09EF94C220C948320034428E /* LoginViewController.swift */,
 				0960C53D20C963AF003B2334 /* ProgressViewController.swift */,
 				0960C53F20C963C2003B2334 /* CalendarViewController.swift */,
@@ -339,7 +338,6 @@
 			files = (
 				09EF949B20C92FB60034428E /* LaunchScreen.storyboard in Resources */,
 				09EF949820C92FB60034428E /* Assets.xcassets in Resources */,
-				0903F88720CE922D0099E104 /* GoogleService-Info.plist in Resources */,
 				09EF949620C92FB50034428E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
