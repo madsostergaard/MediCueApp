@@ -6,7 +6,7 @@ target 'MediCueApp' do
   use_frameworks!
 
   # Pods for BEMCheckBox
-  pod ‘BEMCheckBox’
+  pod 'BEMCheckBox'
 
   # Pods for MediCueApp
   pod 'EstimoteSDK'
