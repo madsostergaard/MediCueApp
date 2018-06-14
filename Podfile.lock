@@ -29,6 +29,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Neon (0.4.0)
 
 DEPENDENCIES:
   - BEMCheckBox
@@ -48,6 +49,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - leveldb-library
     - nanopb
+    - Neon
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
@@ -60,6 +62,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
 
 PODFILE CHECKSUM: e5cc5dfdf425b7e70ddc8b3fdab21cc72d276e1b
 

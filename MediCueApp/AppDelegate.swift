@@ -19,14 +19,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         FirebaseApp.configure()
         
-        //        Hvis oliver laver lort i den:
-//        let ref = Database.database().reference()
-//        for i in 1...10000 {
-//            let tempRef = ref.child(String(i))
-//            tempRef.removeValue()
-//        }
+        self.triggerManager.delegate = self
+        
+        let rule1 = ESTOrientationRule.orientationEquals(
+            .horizontalUpsideDown, forNearableIdentifier: "7946c1b3ad6b2184")
+        let rule2 = ESTMotionRule.motionStateEquals(
+            true, forNearableIdentifier: "7946c1b3ad6b2184")
+        let trigger = ESTTrigger(rules: [rule1, rule2], identifier: "tom the trigger")
+        
+        self.triggerManager.startMonitoring(for: trigger)
+        
         
         return true
+    }
+    
+    func triggerManager(_ manager: ESTTriggerManager,
+                        triggerChangedState trigger: ESTTrigger) {
+        if (trigger.identifier == "tom the trigger" && trigger.state == true) {
+            print("Hello, digital world! The physical world has spoken.")
+        } else {
+            print("Goodnight. <spoken in the voice of a turret from Portal>")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -11,6 +11,7 @@
 		0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */; };
 		0903F88720CE922D0099E104 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903F88620CE922D0099E104 /* GoogleService-Info.plist */; };
 		0903F88920CFC9890099E104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88820CFC9890099E104 /* HomeViewController.swift */; };
+		0903F88B20CFD1D30099E104 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903F88A20CFD1D30099E104 /* MainTabBar.swift */; };
 		0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53D20C963AF003B2334 /* ProgressViewController.swift */; };
 		0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C53F20C963C2003B2334 /* CalendarViewController.swift */; };
 		0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54120C963F6003B2334 /* MedicineTableViewController.swift */; };
@@ -25,6 +26,11 @@
 		09EF94A620C92FB60034428E /* MediCueAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF94A520C92FB60034428E /* MediCueAppTests.swift */; };
 		09EF94B120C92FB70034428E /* MediCueAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF94B020C92FB70034428E /* MediCueAppUITests.swift */; };
 		09EF94C320C948320034428E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF94C220C948320034428E /* LoginViewController.swift */; };
+		09FB275920D101D500A32C13 /* CalendarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FB275820D101D500A32C13 /* CalendarKit.framework */; };
+		09FB275B20D101DD00A32C13 /* DateToolsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FB275A20D101DD00A32C13 /* DateToolsSwift.framework */; };
+		09FB275D20D1026F00A32C13 /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB275C20D1026F00A32C13 /* DatePickerController.swift */; };
+		09FB275F20D1217F00A32C13 /* SetTimesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB275E20D1217F00A32C13 /* SetTimesTableViewController.swift */; };
+		09FB276120D13C5A00A32C13 /* MedicineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB276020D13C5A00A32C13 /* MedicineDetailsViewController.swift */; };
 		0B40DCD90E4AF83840855B9A /* Pods_MediCueAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623BCBB0D22BAEB566D3D82 /* Pods_MediCueAppTests.framework */; };
 		8F13614D0DD8A8F31647A65A /* Pods_MediCueApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE4E0C0997790CD521CD710 /* Pods_MediCueApp.framework */; };
 		B4B3E8DD5532D8E09BB42434 /* Pods_MediCueAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE37913F97DB5E2F321037C /* Pods_MediCueAppUITests.framework */; };
@@ -53,6 +59,7 @@
 		0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineTimesViewController.swift; sourceTree = "<group>"; };
 		0903F88620CE922D0099E104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0903F88820CFC9890099E104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0903F88A20CFD1D30099E104 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		0960C53D20C963AF003B2334 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		0960C53F20C963C2003B2334 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0960C54120C963F6003B2334 /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +82,11 @@
 		09EF94BE20C934210034428E /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		09EF94BF20C936EE0034428E /* MediCueApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MediCueApp.entitlements; sourceTree = "<group>"; };
 		09EF94C220C948320034428E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		09FB275820D101D500A32C13 /* CalendarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalendarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09FB275A20D101DD00A32C13 /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09FB275C20D1026F00A32C13 /* DatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		09FB275E20D1217F00A32C13 /* SetTimesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimesTableViewController.swift; sourceTree = "<group>"; };
+		09FB276020D13C5A00A32C13 /* MedicineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailsViewController.swift; sourceTree = "<group>"; };
 		0D121CFBEFA93FFA30AD4F63 /* Pods-MediCueAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueAppTests/Pods-MediCueAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		11F1D59D2634C9F83E8D6AAA /* Pods-MediCueApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediCueApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3623BCBB0D22BAEB566D3D82 /* Pods_MediCueAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediCueAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +172,10 @@
 				0903F88220CA99A80099E104 /* AddMedicineViewController.swift */,
 				0903F88420CA99F50099E104 /* AddMedicineTimesViewController.swift */,
 				0903F88820CFC9890099E104 /* HomeViewController.swift */,
+				0903F88A20CFD1D30099E104 /* MainTabBar.swift */,
+				09FB275C20D1026F00A32C13 /* DatePickerController.swift */,
+				09FB275E20D1217F00A32C13 /* SetTimesTableViewController.swift */,
+				09FB276020D13C5A00A32C13 /* MedicineDetailsViewController.swift */,
 			);
 			path = MediCueApp;
 			sourceTree = "<group>";
@@ -412,6 +428,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MediCueApp/Pods-MediCueApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Neon/Neon.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -419,6 +436,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Neon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -436,16 +454,20 @@
 			files = (
 				0960C54020C963C2003B2334 /* CalendarViewController.swift in Sources */,
 				0903F88520CA99F50099E104 /* AddMedicineTimesViewController.swift in Sources */,
+				09FB275F20D1217F00A32C13 /* SetTimesTableViewController.swift in Sources */,
 				0960C54220C963F6003B2334 /* MedicineTableViewController.swift in Sources */,
 				0903F88320CA99A80099E104 /* AddMedicineViewController.swift in Sources */,
 				09EF94C320C948320034428E /* LoginViewController.swift in Sources */,
 				09EF949320C92FB50034428E /* ViewController.swift in Sources */,
 				09EF949120C92FB50034428E /* AppDelegate.swift in Sources */,
 				0960C53E20C963AF003B2334 /* ProgressViewController.swift in Sources */,
+				09FB276120D13C5A00A32C13 /* MedicineDetailsViewController.swift in Sources */,
 				0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */,
 				0960C54820CA6BAE003B2334 /* AddNewUserViewController.swift in Sources */,
 				0960C54620CA60FB003B2334 /* Medicine.swift in Sources */,
+				09FB275D20D1026F00A32C13 /* DatePickerController.swift in Sources */,
 				0903F88920CFC9890099E104 /* HomeViewController.swift in Sources */,
+				0903F88B20CFD1D30099E104 /* MainTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

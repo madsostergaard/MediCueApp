@@ -416,6 +416,8 @@
 		650E3E60F7423CAEB4CDB9E2764C351C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652BFE4B54084EA3AD7F60DB5CBB21F2 /* ESTRequestRegisterDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTRequestRegisterDevice.h; path = EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestRegisterDevice.h; sourceTree = "<group>"; };
 		658E3E56BCF315B07491116EE5444302 /* Pods-MediCueApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MediCueApp-frameworks.sh"; sourceTree = "<group>"; };
+		65B4F457690EB7B962614851AC3B0068 /* ESTBeaconOperationEddystoneConfigurationServiceEnable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ESTBeaconOperationEddystoneConfigurationServiceEnable.h; path = EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneConfigurationServiceEnable.h; sourceTree = "<group>"; };
+		65B7B42936EF992FFD07662AF85326EE /* options.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = options.h; path = include/leveldb/options.h; sourceTree = "<group>"; };
 		65C289DCCA273257A71D743E6EDF321D /* Pods-MediCueApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MediCueApp-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6606650E6D8A4D029FA18A4072D5871D /* table.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table.cc; path = table/table.cc; sourceTree = "<group>"; };
@@ -767,11 +769,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5A97BF2A31DDB62BFE6C572393CE38F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4F532D70649EC30F65F3D2A326A724 /* DateToolsSwift.framework in Frameworks */,
+				4C5E9852F5A97D125ECF04391876B787 /* Foundation.framework in Frameworks */,
+				D109AE7765DDADB9B2B0F55A6D7FEBAF /* Neon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6648F9575255A80C122B58B85556E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E0E49BAD312C1897E4458FEA712C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF6F105503C3B6DC38F0074CD89240EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167CE2FCFB106EDEC2905B0C57CA2ADC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,22 +1071,55 @@
 			path = "leveldb-library";
 			sourceTree = "<group>";
 		};
-		6DEBE313FD88D39FBDD6F0F871201924 /* Pods-MediCueAppUITests */ = {
+		729107658C73AC30F18A584CB1561797 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				47ED33A3C3DFFB5C331FC703D3A9CEA2 /* Info.plist */,
-				D378A00B75AA5EAF8DEA2261933065AD /* Pods-MediCueAppUITests.modulemap */,
-				9DE5D75B3C0F2C4438C2266B1FED9BDC /* Pods-MediCueAppUITests-acknowledgements.markdown */,
-				18CA265F9A6E84C829E3F9B19DBEFFE9 /* Pods-MediCueAppUITests-acknowledgements.plist */,
-				EC0FE847E71D5B89A88B1F04820790F1 /* Pods-MediCueAppUITests-dummy.m */,
-				0E013C2D149D4EE786B16610C6D0B484 /* Pods-MediCueAppUITests-frameworks.sh */,
-				FD6C87EA863C954CBFBD58F28B90A792 /* Pods-MediCueAppUITests-resources.sh */,
-				102C37A786D8D5A99AA4FBEA2A2BE7AB /* Pods-MediCueAppUITests-umbrella.h */,
-				47D8F27E2886A021B48ADBDC8ABCA943 /* Pods-MediCueAppUITests.debug.xcconfig */,
-				7FFA9E71392471CE196764371BC096FE /* Pods-MediCueAppUITests.release.xcconfig */,
+				A18FCA70312A224BFE5A34E3E08586A3 /* Info.plist */,
+				A03791BC349B4611B0CE3FC08F915366 /* Neon.modulemap */,
+				B5FB7FE0C4E63640B528B7D7E3E46634 /* Neon.xcconfig */,
+				1F066833BEB67E06D1E85F5123C1122B /* Neon-dummy.m */,
+				481B80DC5001BD4656AEBBEF370662A3 /* Neon-prefix.pch */,
+				5B8A2940E6F36F32D4A3968B19013C29 /* Neon-umbrella.h */,
 			);
-			name = "Pods-MediCueAppUITests";
-			path = "Target Support Files/Pods-MediCueAppUITests";
+			name = "Support Files";
+			path = "../Target Support Files/Neon";
+			sourceTree = "<group>";
+		};
+		72FE7D0C96A4054B9542A9001D88628A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3180A85F22CD05836E68D0C201DF40EB /* Info.plist */,
+				80F7C9806D26BC464F3CFC723FB3368E /* nanopb.modulemap */,
+				27C86B0A713F33015E8AC35C42148797 /* nanopb.xcconfig */,
+				4F58C67040B9A0ED71B5DAD6624C34E9 /* nanopb-dummy.m */,
+				DBD6DFC16BDD9AA4ECBB847FFCF4A1FF /* nanopb-prefix.pch */,
+				D1D2AB1C0FB0A6AEA79C1DA8F41BE73D /* nanopb-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/nanopb";
+			sourceTree = "<group>";
+		};
+		774A580677B4B3BCCF1E181AE224D488 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				C01ADBFAE94FF4E06AE066D5720C1EA5 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		7B7A1FB42F6FD0CD3A39FF7C9BF4D8B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				46DECF4DC2A0428BAC53F82AB77499E6 /* CalendarKit.modulemap */,
+				864530F64B1ABD39ECCA9A8B2248F37E /* CalendarKit.xcconfig */,
+				9015B3631E74E599DD27FA08DD386B4E /* CalendarKit-dummy.m */,
+				F69B3C4F581F4FBFA7FD5A83CB0B776A /* CalendarKit-prefix.pch */,
+				F7ED6BBFF4BA34FD6F38B40C907876D0 /* CalendarKit-umbrella.h */,
+				EAAFC35879211EFD4736D0CF0F9C0474 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CalendarKit";
 			sourceTree = "<group>";
 		};
 		739F43A84078C902870A99C38F33E997 /* Pods */ = {
@@ -1483,10 +1544,18 @@
 			path = EstimoteSDK;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		B1680180B9E1327562BE6D614C624960 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				06A4ED477207F2C6DBF67E5533357CD6 /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		C01ADBFAE94FF4E06AE066D5720C1EA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A974E8F89CE77C0872597FA700717C92 /* FirebaseCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1523,12 +1592,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		E5384E6F67EEB8214370B063BFD3570E /* NSData+zlib */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				9C6E0D986AE96A8EB2553CC6F5014D90 /* GTMNSData+zlib.h */,
+				1F79C7A22AB3817A81D566A654084FE5 /* GTMNSData+zlib.m */,
 			);
-			name = iOS;
+			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
 		DBAEA0CD046D96F9C39F1D6E18E6B815 /* Core */ = {
@@ -1587,6 +1657,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		099D5BC6CF6CEC62D69DF864EC830305 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6202762CA6F41276F8901F8A5034B /* Pods-MediCueApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4547B9AF8085A499AA35614798F8F9E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1693,6 +1771,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				558CC2FADD4EA2972C05FA6BE50F822E /* Pods-MediCueAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E323A7D2D048ACE8A42120CC1558490A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91BA9F6D83015197D073483BD704B22 /* CalendarKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1866,7 +1952,54 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		686473E35F26AA3F16AAD46D8C819CAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44E3877433D9ACD8C191B3B474B1E952 /* DateTools.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		1BCB925C854E3FE48B3876D32AA3DECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9073CF71A40D5002F793E75E6DF481E4 /* Array+Shift.swift in Sources */,
+				4BBBCF9BF8863D639F222DDD3C880D05 /* CalendarKit-dummy.m in Sources */,
+				2594EBC39D812D786507E16A9A13C192 /* CalendarStyle.swift in Sources */,
+				C543F57B4060C1881FB847AA798E7C53 /* CurrentTimeIndicator.swift in Sources */,
+				2CCE1C47B5D13E23150A9C9532FB02C8 /* Date+DateOnly.swift in Sources */,
+				EB3208AEBA76FC4ACDBD633356E1FD97 /* DateLabel.swift in Sources */,
+				CCF85C52257EE02B6F712319DDD4D320 /* DayDateCell.swift in Sources */,
+				A4FA7BF794832248F04D9E8B04B89EB9 /* DayHeaderView.swift in Sources */,
+				A19E6932B6E141F473D2B7A9745296FB /* DaySelector.swift in Sources */,
+				D6324F0EB0088F8A9254666C70A284D7 /* DaySymbolsView.swift in Sources */,
+				AB1A7F70FC48DC9CD8B7490410B593F5 /* DayView.swift in Sources */,
+				ED44FFDF412DCB25DBCB8A4B87F8C667 /* DayViewController.swift in Sources */,
+				C5E4092E1DFEFC67CF6A1A9E92F06A59 /* DayViewState.swift in Sources */,
+				E132C974704500BC39DCF96B2F54A1F0 /* Event.swift in Sources */,
+				70B6C4D620C5A21CD3C33455D40EFC47 /* EventDataSource.swift in Sources */,
+				4E0C46EE8ECCD520530805B3A8788EAA /* EventDescriptor+DateTools.swift in Sources */,
+				81B7BA509AF75021370150309C38A126 /* EventDescriptor.swift in Sources */,
+				94A3559E2F7595E3AD979EB5AB7DFDB7 /* EventLayoutAttributes.swift in Sources */,
+				26577834F3DF7F0453E037BCEF8A7830 /* EventView.swift in Sources */,
+				D68449E05C2DB3D01CAD3872E027DC3E /* Generator.swift in Sources */,
+				722A1D2618F8D74878D5C37096F5699D /* Locale+24Hour.swift in Sources */,
+				80D8EDEFABBF10642A9EA25DCF52AC42 /* PagingScrollView.swift in Sources */,
+				401A184BDEC250FCADC4A5AC3D5A1890 /* ReusePool.swift in Sources */,
+				B2DDD5289D2AD647665FC0767F56F600 /* ScrollSyncronizer.swift in Sources */,
+				F08FEE3EF35AA9765AB2F53049C68FA8 /* SwipeLabelView.swift in Sources */,
+				8287A61BB6A3DDE350689B2AA05804F8 /* TimeChunk+DateComponents.swift in Sources */,
+				CFA5DC38C97112EA39DA59AEE6B56BD9 /* TimelineContainer.swift in Sources */,
+				385C2AFB94125511720C5E57770A60FA /* TimelinePagerView.swift in Sources */,
+				EACB94623BCAC24FF3F30018726013BA /* TimelineView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238527BE8D494586023F2A2B8A60D242 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1907,11 +2040,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67B1C1A617D9D7BD70CFF4FA0E581082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D80E35005B49C1E4FA3BD18FE5E38AF /* Pods-MediCueApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D7162A10099FF59468F82FD9D1F6F1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				930E5A3EF18540BD466AFEB2B3139FBE /* Pods-MediCueAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76BB86328A05D966C5124F11DF854407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B090E51BEA040EC0AFF12718AD93F9E /* Neon-dummy.m in Sources */,
+				4932D5DCD9042B86C1740C67BD106360 /* Neon.swift in Sources */,
+				6DD6BEB2DA2E8871F0833B8EAA343DF0 /* NeonAlignable.swift in Sources */,
+				064C2776D7EFE25EC1BDB52CA1A2C02D /* NeonAnchorable.swift in Sources */,
+				B1DF22D9B2D3221FBE8C6EBA2F11D683 /* NeonExtensions.swift in Sources */,
+				8832B5A472670F23FF02CD29581E0B81 /* NeonFrameable.swift in Sources */,
+				F3EA91431C7F97F8633641B3EFD246EA /* NeonGroupable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBBF0718C9899E68F848A01F093E1F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA76256C2F03AAF7F93AA13D373F0B1F /* Constants.swift in Sources */,
+				E7D904C528EBD8B36A4C4118EC6BDAC6 /* Date+Bundle.swift in Sources */,
+				19B96222CE4C2648735B7C137454B66F /* Date+Comparators.swift in Sources */,
+				3E06D4109501F2C927E30BCBEFF7A1F1 /* Date+Components.swift in Sources */,
+				E57D5487390B6021A5FBF9C2C3F49598 /* Date+Format.swift in Sources */,
+				F04BD535DF7AAEB8C04A44B82D41ADEA /* Date+Inits.swift in Sources */,
+				6377DD666B11F42BB9ADA930554BA28E /* Date+Manipulations.swift in Sources */,
+				F5C03F354CE98FAB1F0B4147CF3A0F3F /* Date+TimeAgo.swift in Sources */,
+				34C10501A9EB3D6CE8630601460AC70C /* DateToolsSwift-dummy.m in Sources */,
+				01107D62ED97086D964D04777D7B58C0 /* Enums.swift in Sources */,
+				B4D7A9F47A0528DDC3744462EEC0369E /* Integer+DateTools.swift in Sources */,
+				FEC1C70C7E64B5559C42291CBB3278D3 /* TimeChunk.swift in Sources */,
+				1D53A028F66D1456B74F10441E6F24FD /* TimePeriod.swift in Sources */,
+				8A883CF6B5188F561A8769DFE100513C /* TimePeriodChain.swift in Sources */,
+				99952636DFDA010B4AAA6B2395494A1D /* TimePeriodCollection.swift in Sources */,
+				6BEC536557C0EDA459928CE55AF4E8E0 /* TimePeriodGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1994,7 +2172,7 @@
 			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
 			targetProxy = 4E7A1BCFDF854102CD698E703E79A842 /* PBXContainerItemProxy */;
 		};
-		CCBBA525488A13BA214CA2F819E4E0F3 /* PBXTargetDependency */ = {
+		907EB99E518456458666A5711194DE0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MediCueApp";
 			target = F0601DEACB722C3B9B742312947CF196 /* Pods-MediCueApp */;
@@ -2195,6 +2373,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2258,6 +2437,39 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		638F7B1835035F1C6797C2D9040FA9D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90639A9970C68867E17E6DDD4248AA70 /* DateToolsSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DateToolsSwift/DateToolsSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateToolsSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DateToolsSwift/DateToolsSwift.modulemap";
+				PRODUCT_MODULE_NAME = DateToolsSwift;
+				PRODUCT_NAME = DateToolsSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2495,6 +2707,38 @@
 			};
 			name = Debug;
 		};
+		C3FA13B17A440487FDE21C669AFB82D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FB7FE0C4E63640B528B7D7E3E46634 /* Neon.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Neon/Neon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Neon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Neon/Neon.modulemap";
+				PRODUCT_MODULE_NAME = Neon;
+				PRODUCT_NAME = Neon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		D20C93275C145A4326391D40610D088A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FF65A444D0937FF15A5B084D25A7E79 /* leveldb-library.xcconfig */;
@@ -2595,6 +2839,38 @@
 			};
 			name = Debug;
 		};
+		F058CB669214D6C36B5BD58D5F68DD4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 864530F64B1ABD39ECCA9A8B2248F37E /* CalendarKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CalendarKit/CalendarKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CalendarKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CalendarKit/CalendarKit.modulemap";
+				PRODUCT_MODULE_NAME = CalendarKit;
+				PRODUCT_NAME = CalendarKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2652,11 +2928,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9221D5653AA78F04FD8D166258E5A2D2 /* Build configuration list for PBXNativeTarget "DateToolsSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23BCB58BC7BB03090FA05E0F7A15AAA /* Debug */,
+				638F7B1835035F1C6797C2D9040FA9D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B026DC839ED3B3383F90AE104BE6203B /* Build configuration list for PBXNativeTarget "Neon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FA13B17A440487FDE21C669AFB82D4 /* Debug */,
+				0B827A63B82DAB57759D0BA942654523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B799A6DC3BB927577A9FB3F82B751313 /* Debug */,
 				50A973BB5059B599335B98354D72034E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E33BAFF62E0E922D220088FA4C0065E2 /* Build configuration list for PBXNativeTarget "CalendarKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F058CB669214D6C36B5BD58D5F68DD4C /* Debug */,
+				A6729138AB51DEDE17AFC9474B3D5D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
