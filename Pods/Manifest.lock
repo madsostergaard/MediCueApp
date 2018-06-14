@@ -44,7 +44,7 @@ DEPENDENCIES:
   - Firebase/Database
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - BEMCheckBox
     - CalendarKit
     - DateToolsSwift
@@ -76,4 +76,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f66962cffc7fc3014bd9bc76c060bea143690f69
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

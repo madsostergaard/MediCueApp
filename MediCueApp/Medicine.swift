@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseDatabase
 
 struct MedicineTimes {
     var morning: Int? = 0

@@ -17,6 +17,8 @@
 		0960C54420C96405003B2334 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54320C96405003B2334 /* SettingsTableViewController.swift */; };
 		0960C54620CA60FB003B2334 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54520CA60FB003B2334 /* Medicine.swift */; };
 		0960C54820CA6BAE003B2334 /* AddNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960C54720CA6BAE003B2334 /* AddNewUserViewController.swift */; };
+		0964D77520D265BF0052D261 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0964D77420D265BF0052D261 /* FirebaseDatabase.framework */; };
+		0964D77720D265C70052D261 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0964D77620D265C70052D261 /* FirebaseCore.framework */; };
 		09BBB83620D25F3400B6C2A9 /* CalendarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BBB83520D25F3400B6C2A9 /* CalendarKit.framework */; };
 		09EF949120C92FB50034428E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF949020C92FB50034428E /* AppDelegate.swift */; };
 		09EF949320C92FB50034428E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF949220C92FB50034428E /* ViewController.swift */; };
@@ -63,6 +65,8 @@
 		0960C54320C96405003B2334 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		0960C54520CA60FB003B2334 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		0960C54720CA6BAE003B2334 /* AddNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewController.swift; sourceTree = "<group>"; };
+		0964D77420D265BF0052D261 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0964D77620D265C70052D261 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BBB83520D25F3400B6C2A9 /* CalendarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalendarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF948D20C92FB50034428E /* MediCueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediCueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF949020C92FB50034428E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		09EF94BE20C934210034428E /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		09EF94BF20C936EE0034428E /* MediCueApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MediCueApp.entitlements; sourceTree = "<group>"; };
 		09EF94C220C948320034428E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		09F711DC20D264F900E7954C /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FB275C20D1026F00A32C13 /* DatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
 		09FB275E20D1217F00A32C13 /* SetTimesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimesTableViewController.swift; sourceTree = "<group>"; };
 		09FB276020D13C5A00A32C13 /* MedicineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailsViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0964D77720D265C70052D261 /* FirebaseCore.framework in Frameworks */,
+				0964D77520D265BF0052D261 /* FirebaseDatabase.framework in Frameworks */,
 				09BBB83620D25F3400B6C2A9 /* CalendarKit.framework in Frameworks */,
 				D9C065B120D120C70030F43B /* BEMCheckBox.framework in Frameworks */,
 				8F13614D0DD8A8F31647A65A /* Pods_MediCueApp.framework in Frameworks */,
@@ -199,6 +206,9 @@
 		0ADB3773F4A6793F49FA60AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0964D77620D265C70052D261 /* FirebaseCore.framework */,
+				0964D77420D265BF0052D261 /* FirebaseDatabase.framework */,
+				09F711DC20D264F900E7954C /* GoogleToolboxForMac.framework */,
 				09BBB83520D25F3400B6C2A9 /* CalendarKit.framework */,
 				D9C065B220D120C70030F43B /* BEMCheckBox.framework */,
 				7AE4E0C0997790CD521CD710 /* Pods_MediCueApp.framework */,
