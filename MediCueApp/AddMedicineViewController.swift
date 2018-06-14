@@ -55,27 +55,40 @@ class AddMedicineViewController: UIViewController {
             // create a MedicineTimes object and set interval
             var medTimesTemp = MedicineTimes.init()
             
-            print(interval.titleForSegment(at: interval.selectedSegmentIndex)!)
+            //print(interval.titleForSegment(at: interval.selectedSegmentIndex)!)
             
             medTimesTemp.frequency = MedicineTimes.interval(rawValue: interval.titleForSegment(at: interval.selectedSegmentIndex)!)
             
             
             
-            print(medTimesTemp.frequency!)
-            
-           // let med = Medicine(name: nameTextField.text!, size: Int(packageCountTextField.text!), date: self.med?.stringToDate(from: startDateTextField.text!), endDate: self.med?.stringToDate(from: endDateTextField.text!), medType: Medicine.MedicineType(rawValue: typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!), medTimes: medTimesTemp)
-            
-            let medi = Medicine(name: "panodil")
+            let testMed = Medicine(name: "TestMed")
+            let medType: Medicine.MedicineType
+           // print(medTimesTemp.frequency!)
+            let typeString = typeSegmentedControl.titleForSegment(at: typeSegmentedControl.selectedSegmentIndex)!
+            if typeString == Medicine.MedicineType.injektion.rawValue{
+               medType = Medicine.MedicineType.injektion
+            } else if typeString == Medicine.MedicineType.pill.rawValue{
+               medType = Medicine.MedicineType.pill
+            } else{
+                medType = Medicine.MedicineType.tablet
+            }
+    
+           let med = Medicine(name: nameTextField.text!,
+                              size: Int(packageCountTextField.text!),
+                              date: testMed?.stringToDate(from: startDateTextField.text!),
+                              endDate: testMed?.stringToDate(from: endDateTextField.text!),
+                              medType: medType,
+                              medTimes: medTimesTemp)
             
             let nav = segue.destination as! UINavigationController
-            if let navTopViewVC = nav.topViewController {
+            if nav.topViewController != nil {
                 print("TOPVIEW NOT NIL")
             }
             else {
                 print("TOPVIEW NIL")
             }
             if let addMedicineTimes = nav.topViewController as? AddMedicineTimesViewController {
-                addMedicineTimes.med = medi
+                addMedicineTimes.med = med
             }
             else {
                 print("NOT ADDMEDICINEVC")
@@ -101,21 +114,5 @@ class AddMedicineViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

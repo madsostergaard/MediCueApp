@@ -10,5 +10,6 @@
 #define ObjCBridge_h
 
 #import <EstimoteSDK/EstimoteSDK.h>
+#import <BEMCheckBox/BEMCheckBox.h>
 
 #endif /* ObjCBridge_h */

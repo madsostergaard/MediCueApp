@@ -10,14 +10,9 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, ESTTriggerManagerDelegate  {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-    
-    let triggerManager = ESTTriggerManager()
-
-    let commands = ["MorningTime","FormiddagTime","MiddagTime",
-                    "EftermiddagTime","AftenTime","NatTime"]
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
